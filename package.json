@@ -1,0 +1,21 @@
+{
+  "name": "the-int",
+  "version": "0.0.1",
+  "description": "The International statistics",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blukai/the-int.git"
+  },
+  "keywords": [
+    "dota2",
+    "stats",
+    "ti",
+    "valve"
+  ],
+  "author": "blukai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blukai/the-int/issues"
+  },
+  "homepage": "https://github.com/blukai/the-int#readme"
+}
