@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/blukai/the-int/issues"
   },
-  "homepage": "https://github.com/blukai/the-int#readme"
+  "homepage": "https://github.com/blukai/the-int#readme",
+  "dependencies": {
+    "axios": "^0.13.1",
+    "dotenv": "^2.0.0",
+    "firebase": "^3.2.1"
+  }
 }
