@@ -9,14 +9,13 @@ firebase.initializeApp({
   databaseURL: process.env.FIREBASE_URL
 });
 
-var ref = firebase.database().ref('the-int'),
+let ref = firebase.database().ref('the-int'),
     matchesRef = ref.child('matches');
 
 let leagueId = 4664; // The International 2016
 
 matchesRef.once('value', (snap) => {
   if(snap.exists()) {
-
     matchesRef.orderByKey().once('value', (snap) => {
       let hasMatches = Object.keys(snap.val());
 
@@ -49,9 +48,7 @@ matchesRef.once('value', (snap) => {
         }
       })
     });
-
   } else {
-
     axios.get('/esports/leagues/' + leagueId + '/scores', {
       baseURL: 'http://www.dotabuff.com/'
     }).then((res) => {
@@ -75,6 +72,5 @@ matchesRef.once('value', (snap) => {
         })
       }
     })
-
   }
 });
