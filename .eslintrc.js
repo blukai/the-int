@@ -6,5 +6,3 @@ module.exports = {
         camelcase: ["error", {properties: "never"}]
     }
 };
-
-// npm i -g eslint eslint-config-google
