@@ -24,5 +24,8 @@
     "dotenv": "^2.0.0",
     "firebase": "^3.2.1",
     "request": "^2.74.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.2.2"
   }
 }
