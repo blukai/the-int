@@ -1,0 +1,74 @@
+matches:
+  ✔ match_id @done
+  ✔ league_id @done
+  ✔ series_id @done
+  ✔ series_type @done
+  ✔ human_players @done
+  ✔ game_mode @done
+  ✔ lobby_type @done
+  ✔ radiant_team_id @done
+  ✔ dire_team_id @done
+  ✔ start_time @done
+  ✔ duration @done
+  ✔ first_blood_time @done
+  ✔ cluster @done
+  ✘ patch @cancelled
+      ☐ определять патч по времени start_time @low 
+  ✔ radiant_win @done
+  ✔ tower_status_radiant @done
+  ✔ tower_status_dire @done
+  ✔ barracks_status_radiant @done
+  ✔ barracks_status_dire @done
+  ✔ picks_bans @done
+  ✔ objectives @done
+  ✔ chat @done
+
+player_mathces:
+  ✔ match_id @done
+  ✔ account_id @done
+  ✔ player_slot @done
+  ✔ hero_id @done
+  ✔ level @done
+  ✔ kills @done
+  ✔ assists @done
+  ✔ deaths @done
+  ✔ last_hits: @done
+      total
+      neutral_kills
+      ancient_kills
+      tower_kills
+      courier_kills
+      observer_kills
+      sentry_kills
+      roshan_kills
+      necronomicon_kills
+  ✔ denies @done
+  ✔ gold_per_min @done
+  ✔ xp_per_min @done
+  ✔ hero_damage @done
+  ✔ tower_damage @done
+  ✔ hero_healing @done
+  ✔ item_0 - 5 @done
+  ✔ gold_spent @done
+  ✔ was_dead @done
+  ✔ lane @done
+  ✔ lane_role @done
+  ✔ multi_kills @done
+  ✔ runes @done
+  ✔ actions: @done
+      apm
+      pings
+      glyph
+      scan
+  ✔ max_hero_hit: @done
+      time
+      causer
+      amount
+      target
+  ✔ purchases: @done
+      rapier
+      sentry
+      observer
+      smoke
+      dust
+      gem
