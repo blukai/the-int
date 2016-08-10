@@ -19,13 +19,13 @@
   },
   "homepage": "https://github.com/blukai/the-int#readme",
   "dependencies": {
-    "axios": "^0.13.1",
     "cheerio": "^0.20.0",
-    "dotenv": "^2.0.0",
-    "firebase": "^3.2.1",
+    "gcloud": "^0.37.0",
+    "googleapis": "^12.2.0",
     "request": "^2.74.0"
   },
   "devDependencies": {
+    "dotenv": "^2.0.0",
     "eslint": "^3.2.2",
     "eslint-config-google": "^0.6.0"
   }
