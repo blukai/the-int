@@ -1,18 +1,17 @@
 require('dotenv').config({silent: true});
-const c = process.env,
-    saFile = './service-account.json',
-    matchIdsFile = './matchIds.json';
-
-var request = require('request'),
+let c = process.env,
+    path = require("path"),
+    saFile = path.join(__dirname, '../service-account.json'),
+    matchIdsFile = path.join(__dirname, '../json/matchIds.json'),
+    request = require('request'),
     cheerio = require('cheerio'),
     fs = require('fs'),
     gcloud = require('gcloud')({
       projectId: c.BQ_PRJ,
       keyFilename: saFile
     }),
-    google = require('googleapis');
-
-let leagueId = 4664,
+    google = require('googleapis'),
+    leagueId = 4664,
     now = new Date().getTime() / 1000,
     bqQ = gcloud.bigquery(), // queries
     bqI = google.bigquery('v2'), // inserts
