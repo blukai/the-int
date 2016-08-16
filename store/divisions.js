@@ -1,7 +1,7 @@
 let path = require("path");
 module.exports = {
   divisions: function() {
-    let regions = require(path.join(__dirname, './json/regions.json')).regions,
+    let regions = require(path.join(__dirname, '../json/regions.json')).regions,
         regionKeys = Object.keys(regions),
         clusters = {},
         divisions = [];

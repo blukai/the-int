@@ -20,18 +20,13 @@
   "homepage": "https://github.com/blukai/the-int#readme",
   "dependencies": {
     "cheerio": "^0.20.0",
-<<<<<<< HEAD
     "gcloud": "^0.37.0",
     "googleapis": "^12.2.0",
-=======
->>>>>>> d97f592b575b037cda0c6b3a4ae62a41e5a526bf
     "request": "^2.74.0"
   },
   "devDependencies": {
     "dotenv": "^2.0.0",
     "eslint": "^3.2.2",
-    "eslint-config-google": "^0.6.0",
-    "gcloud": "^0.37.0",
-    "googleapis": "^12.2.0"
+    "eslint-config-google": "^0.6.0"
   }
 }

@@ -1,19 +1,22 @@
 require('dotenv').config({silent: true});
 let c = process.env,
-    path = require("path"),
-    saFile = path.join(__dirname, '../service-account.json'),
-    matchIdsFile = path.join(__dirname, '../json/matchIds.json'),
+    leagueId = 4664,
+    now = new Date().getTime() / 1000;
+
+let path = require("path"),
+    fs = require('fs'),
     request = require('request'),
     cheerio = require('cheerio'),
-    fs = require('fs'),
-    gcloud = require('gcloud')({
+    google = require('googleapis'),
+    gcloud = require('gcloud');
+
+let saFile = path.join(__dirname, './service-account.json'),
+    matchIdsFile = path.join(__dirname, './json/matchIds.json');
+
+let bqQ = gcloud({
       projectId: c.BQ_PRJ,
       keyFilename: saFile
-    }),
-    google = require('googleapis'),
-    leagueId = 4664,
-    now = new Date().getTime() / 1000,
-    bqQ = gcloud.bigquery(), // queries
+    }).bigquery(), // selects
     bqI = google.bigquery('v2'), // inserts
     gAuth = new google.auth.JWT(
       require(saFile).client_email,
@@ -21,16 +24,14 @@ let c = process.env,
       require(saFile).private_key,
       ['https://www.googleapis.com/auth/cloud-platform'],
       null
-    ),
+    );
 
-    dotabuff = function(file) {
+const dotabuff = function(file) {
       console.log('Updating matchIds');
 
       request({
         url: 'http://www.dotabuff.com/esports/leagues/' + leagueId + '/scores',
-        headers: {
-          'User-Agent': 'Mozilla/5.0'
-        }
+        headers: {'User-Agent': 'Mozilla/5.0'}
       }, (error, response, body) => {
         if (!error && response.statusCode === 200) {
           let $ = cheerio.load(body),
