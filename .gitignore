@@ -2,4 +2,5 @@
 .env
 service-account.json
 node_modules
-matchIds.json
+json/matchIds.json
+t.js
