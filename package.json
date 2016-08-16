@@ -22,6 +22,7 @@
     "cheerio": "^0.20.0",
     "gcloud": "^0.37.0",
     "googleapis": "^12.2.0",
+    "moment": "^2.14.1",
     "request": "^2.74.0"
   },
   "devDependencies": {
